@@ -23,6 +23,7 @@ def get():
 
 @app.route("/", methods=["POST"])
 def post():
+    f = request.form["filename"]
     return request.form["filename"] # request: {"file_name": name_of_file}
 
 
