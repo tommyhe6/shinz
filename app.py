@@ -10,27 +10,19 @@ model = T5ForConditionalGeneration.from_pretrained('t5-small')
 tokenizer = T5Tokenizer.from_pretrained('t5-small')
 device = torch.device('cpu')
 
-f = None
-
 @app.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/", methods=["GET"])
-def get():
-    return summarize(f)
-    
 
 @app.route("/", methods=["POST"])
 def post():
-    f = request.form["filename"]
-    return request.form["filename"] # request: {"file_name": name_of_file}
+    f = request.files["filename"]
+    return summarize(f)
 
 
-def summarize(text_file):
-    with open(text_file, "r") as f:
-        text = f.read()
-
+def summarize(f):
+    text = f.read().decode("utf-8")
     preprocess_text = text.strip().replace("\n"," ")
     t5_prepared_Text = "summarize: "+preprocess_text
 
