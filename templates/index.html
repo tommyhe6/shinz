@@ -19,18 +19,23 @@
     <!-- Bootstrap core CSS -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet">
+    <link href="../assets/index.css" rel="stylesheet">
   </head>
   
   <body> 
     <!-- style="background-color:pink;"
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> -->
     <header>
-        <h1>Shinz <br><br></h1>
+        <nav class="navbar bg-dark shadow">
+          <div class="container-fluid">
+            <span class=" blue h1">Shinz</span>
+          </div>
+        </nav>
     </header>
 
     
     <main>
+      <div class="jumbotron background-blue">
         <h3>Shinz: an easier way to file insurance claims</h3>
         <p>Insurance documents are notoriously complicated. That is why we 
             created Shinz, a website that summarizes complicated documents into 
@@ -38,18 +43,21 @@
             Shinz will output the simplified text. In case you have a question, 
             you can ask Shinz directly using the chatbot in the bottom right corner.</p>
         <h3>How does Shinz work?</h3>
-        <p>Shinzy uses an external library, created by Ramsri Goutham, to summarize documents. 
+        <p>Shinz uses an external library, created by Ramsri Goutham, to summarize documents. 
             The chatbot uses Ada’s services.</p>
         <h3>Why did we create this?</h3>
         <p>We created this website to make the insurance claim process simpler and 
             easier to understand.</p>
+      </div>
 
+      <div class="container background-dark">
         <div class="input-group mb-3">
             <form action="http://127.0.0.1:5000" method="POST">
               <input type="file" class="form-control" id="myFile" name="filename">
               <input type="submit">
             </form>
         </div>
+      </div>
     </main>
 
     <footer>  

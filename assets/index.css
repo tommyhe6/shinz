@@ -1,0 +1,26 @@
+body{
+    background-color: aqua;
+    
+}
+
+h1{
+    color: orange;
+}
+.orange{
+    color: orange;
+}
+.background-blue{
+    background-color: lightblue;
+}
+.blue{
+    color: lightblue;
+}
+.shadow{
+    box-shadow: 5px 10px;
+}
+h3{
+    color:lightcoral
+}
+.background-dark{
+    color:darkslategray
+}
