@@ -46,9 +46,13 @@
 
         <div class="input-group mb-3">
             <form action="http://127.0.0.1:5000" method="POST" enctype="multipart/form-data">
-              <input type="file" class="form-control" id="myFile" name="filename" accept=".txt">
-              <input type="submit">
+              <input type="file" class="form-control" id="myFile" name="filename" accept=".txt"/>
+              <input type="submit" id="submit-button">
             </form>
+        </div>
+
+        <div class="summary">
+            {{ summary }}
         </div>
     </main>
 

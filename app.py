@@ -12,13 +12,13 @@ device = torch.device('cpu')
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", summary="")
 
 
 @app.route("/", methods=["POST"])
 def post():
     f = request.files["filename"]
-    return summarize(f)
+    return render_template("index.html", summary=summarize(f))
 
 
 def summarize(f):
