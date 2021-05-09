@@ -14,7 +14,7 @@ f = None
 
 @app.route("/")
 def index():
-    return "temp"
+    return render_template("index.html")
 
 @app.route("/", methods=["GET"])
 def get():
@@ -23,7 +23,7 @@ def get():
 
 @app.route("/", methods=["POST"])
 def post():
-    return request.form["file_name"] # request: {"file_name": name_of_file}
+    return request.form["filename"] # request: {"file_name": name_of_file}
 
 
 def summarize(text_file):
