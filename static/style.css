@@ -1,10 +1,23 @@
+.btn-primary,
+
+.btn-primary:hover,
+
+.btn-primary:focus{
+  color:black;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
 body{
-    background-color: aqua;
-    
+    background-color: antiquewhite;
 }
 
 h1{
     color: orange;
+}
+h3{
+    color:lightcoral
 }
 .orange{
     color: orange;
@@ -12,15 +25,20 @@ h1{
 .background-blue{
     background-color: lightblue;
 }
+.background-green{
+    background-color:darkslategray
+}
 .blue{
     color: lightblue;
 }
 .shadow{
     box-shadow: 5px 10px;
 }
-h3{
-    color:lightcoral
+
+.separated{
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.background-dark{
-    color:darkslategray
+.clear{
+    background-color: aliceblue;
 }
